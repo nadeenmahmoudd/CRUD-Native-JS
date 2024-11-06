@@ -85,6 +85,7 @@ count.value="",
 category.value=""
 }
 //Read data
+
 function showData(){
     getTotal();
 let table ='';
