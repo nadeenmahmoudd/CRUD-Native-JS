@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+
+</head>
+<body class="bg-dark text-white">
+    <div class="crud mt-3">
+        <div class="head">
+            <h2>CRUD with pure javascript</h2>
+            <p>PRODUCT MANAGEMENT SYSTEM</p>
+        </div>
+        <div class="inputs container">
+            <input placeholder="Title" type="text" id="title" class="form-control">
+            <div class="price d-flex gap-2">
+                <input onkeyup="getTotal()" placeholder="Price" type="number" id="price" class="form-control mt-3">
+                <input onkeyup="getTotal()" placeholder="Taxes" type="number" id="taxes" class="form-control mt-3">
+                <input onkeyup="getTotal()" placeholder="ads" type="number" id="ads" class="form-control mt-3">
+                <input onkeyup="getTotal()" placeholder="Discount" type="number" id="discount" class="form-control mt-3">
+                <span id="total" class="align-self-center mt-3 b-0  w-50 "></span>
+            </div>
+            <input placeholder="Count" type="number" id="count" class="form-control mt-3">
+            <input placeholder="Category" type="text" id="category" class="form-control mt-3">
+            <button id="submit" class="btn w-100 mt-3">Create</button>
+
+        </div>
+        <div class="outputs container">
+            <div class="searchBlock mt-3">
+                <input type="text"onkeyup="searchData(this.value)" placeholder="Search" id="search" class="form-control">
+                <div class="btnSearch d-flex mt-2 justify-content-between gap-2">
+                  <button onclick="getSearchMood(this.id)" id="searchTitle" class="btn w-50">Search by Title</button>
+                  <button onclick="getSearchMood(this.id)" id="searchCategory" class="btn w-50">Search by Category</button>
+
+                </div>
+            </div>
+
+            <div id="deleteAll">
+  
+            </div>
+
+            <table class="table1 mt-4 mb-5 " id="table">
+                <tr class="">
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Taxes</th>
+                    <th>ads</th>
+                    <th>Discount</th>
+                    <th>Total</th>
+                    <th>Category</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                <tbody id="tbody">
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
