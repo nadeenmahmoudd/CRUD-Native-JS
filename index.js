@@ -233,3 +233,69 @@ else{
 document.getElementById('tbody').innerHTML=table;
 
 }
+// const themeToggleBtn = document.getElementById("theme-toggle-btn");
+
+// // Check the user's saved preference from localStorage
+// const savedTheme = localStorage.getItem("theme");
+
+// if (savedTheme) {
+//     document.body.classList.add(savedTheme);
+// } else {
+//     // Default to dark mode if no preference is found
+//     document.body.classList.add("dark-mode");
+// }
+
+// // Function to toggle between dark and light mode
+// themeToggleBtn.addEventListener("click", () => {
+//     if (document.body.classList.contains("dark-mode")) {
+//         document.body.classList.remove("dark-mode");
+//         document.body.classList.add("light-mode");
+//         localStorage.setItem("theme", "light-mode");
+//     } else {
+//         document.body.classList.remove("light-mode");
+//         document.body.classList.add("dark-mode");
+//         localStorage.setItem("theme", "dark-mode");
+//     }
+// });
+
+
+const themeToggleBtn = document.getElementById("theme-toggle-btn");
+const themeIcon = document.getElementById("theme-icon");
+
+// Check the user's saved preference from localStorage
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme) {
+    document.body.classList.add(savedTheme);
+    updateIcon(savedTheme);
+} else {
+    // Default to dark mode if no preference is found
+    document.body.classList.add("dark-mode");
+    updateIcon("dark-mode");
+}
+
+// Function to toggle between dark and light mode
+themeToggleBtn.addEventListener("click", () => {
+    if (document.body.classList.contains("dark-mode")) {
+        document.body.classList.remove("dark-mode");
+        document.body.classList.add("light-mode");
+        localStorage.setItem("theme", "light-mode");
+        updateIcon("light-mode");
+    } else {
+        document.body.classList.remove("light-mode");
+        document.body.classList.add("dark-mode");
+        localStorage.setItem("theme", "dark-mode");
+        updateIcon("dark-mode");
+    }
+});
+
+// Function to update the icon
+function updateIcon(theme) {
+    if (theme === "dark-mode") {
+        themeIcon.classList.remove("fa-sun");
+        themeIcon.classList.add("fa-moon");
+    } else if (theme === "light-mode") {
+        themeIcon.classList.remove("fa-moon");
+        themeIcon.classList.add("fa-sun");
+    }
+}

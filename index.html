@@ -6,13 +6,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 </head>
-<body class="bg-dark text-white">
+<body class="body">
     <div class="crud mt-3">
         <div class="head">
             <h2>CRUD with pure javascript</h2>
             <p>PRODUCT MANAGEMENT SYSTEM</p>
+            
+            <div class="d-flex justify-content-center mb-3 me-5 ">
+                <p id="theme-text" class="mt-3">Try to Toggle between Dark & Light mode</p>
+                <button class="btn btn-secondary p-2 " id="theme-toggle-btn">
+                    <i id="theme-icon" class="fas fa-moon"></i>
+                </button>
+            </div>
         </div>
         <div class="inputs container">
             <input placeholder="Title" type="text" id="title" class="form-control">

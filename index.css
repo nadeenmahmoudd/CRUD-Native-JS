@@ -1,50 +1,110 @@
-*{
+/* Global Reset */
+* {
     margin: 0;
     padding: 0;
 }
-body{
+body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.head{
+/* Common Styling */
+.head {
     text-align: center;
 }
 
-.inputs button , .outputs button{
+.inputs button, .outputs button {
     background-color: blueviolet;
     color: white;
     transition: 0.5s;
     border-radius: 25px;
 }
-.inputs button:hover , .outputs button:hover{
+.inputs button:hover, .outputs button:hover {
     background-color: rgba(137, 43, 226, 0.334);
-
     letter-spacing: 1px;
 }
-#total::before{
-content: 'Total :';
+
+#total::before {
+    content: 'Total :';
 }
-#total{
+#total {
     border-radius: 4px;
     padding: 10px;
     background-color: #a00d02;
 }
-.table1{
+.table1 {
     width: 100%;
     text-align: center;
     margin: 10px 0px;
     background-color: rgba(132, 107, 135, 0.187);
     border-radius: 5px;
 }
-table tr{
+table tr {
     border-bottom: 1px solid gray;
 }
-table th{
+table th {
     text-transform: uppercase;
 }
-th, td{
+th, td {
     padding: 10px;
 }
-#delete-button , #update-button{
+#delete-button, #update-button {
     letter-spacing: normal;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+body.dark-mode #theme-text {
+    color: #ffcc00; /* Yellow text for dark mode */
+}
+body.dark-mode .inputs button, 
+body.dark-mode .outputs button {
+    background-color: blueviolet;
+    color: white;
+}
+body.dark-mode #total {
+    background-color: #a00d02;
+}
+body.dark-mode .table1 {
+    background-color: rgba(132, 107, 135, 0.187);
+}
+body.dark-mode #theme-toggle-btn i {
+    color: whitesmoke;
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: #ffffff;
+    color: #121212;
+}
+body.light-mode #theme-text {
+    color: #0066cc; /* Bright blue text for light mode */
+}
+body.light-mode .inputs button, 
+body.light-mode .outputs button {
+    background-color: #008cba; /* Light blue for buttons */
+    color: white;
+}
+body.light-mode .inputs button:hover, 
+body.light-mode .outputs button:hover {
+    background-color: #005f87; /* Darker blue on hover */
+}
+body.light-mode #total {
+    background-color: #ffcc00;
+}
+body.light-mode .table1 {
+    background-color: rgba(0, 140, 186, 0.1); /* Light blue overlay for tables */
+}
+body.light-mode #theme-toggle-btn i {
+    color: #ffcc00;; /* Coral icon for light mode */
+}
+
+/* Theme Toggle Button */
+#theme-toggle-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
 }
