@@ -57,7 +57,7 @@ body.dark-mode {
     color: #ffffff;
 }
 body.dark-mode #theme-text {
-    color: #ffcc00; /* Yellow text for dark mode */
+    color: #ffcc00;
 }
 body.dark-mode .inputs button, 
 body.dark-mode .outputs button {
@@ -80,25 +80,25 @@ body.light-mode {
     color: #121212;
 }
 body.light-mode #theme-text {
-    color: #0066cc; /* Bright blue text for light mode */
+    color: #0066cc;
 }
 body.light-mode .inputs button, 
 body.light-mode .outputs button {
-    background-color: #008cba; /* Light blue for buttons */
+    background-color: #008cba; 
     color: white;
 }
 body.light-mode .inputs button:hover, 
 body.light-mode .outputs button:hover {
-    background-color: #005f87; /* Darker blue on hover */
+    background-color: #005f87; 
 }
 body.light-mode #total {
     background-color: #ffcc00;
 }
 body.light-mode .table1 {
-    background-color: rgba(0, 140, 186, 0.1); /* Light blue overlay for tables */
+    background-color: rgba(0, 140, 186, 0.1); 
 }
 body.light-mode #theme-toggle-btn i {
-    color: #ffcc00;; /* Coral icon for light mode */
+    color: #ffcc00;; 
 }
 
 /* Theme Toggle Button */
